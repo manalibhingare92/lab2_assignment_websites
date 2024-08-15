@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pune City - Colleges</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1603398284958-69b4218f5d2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 2.5px;
+            padding: 5px;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 80px 20px 20px 20px; /* Add padding-top to avoid content being hidden behind navbar */
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            color: #FFD700;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 4px solid #FFD700;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#coep">COEP</a>
+    <a href="#mit">MIT WPU</a>
+    <a href="#pccoe">PCCOE</a>
+    <a href="#symbiosis">Symbiosis</a>
+    
+</div>
+
+<div class="container">
+    <h1 id="home">COLLEGES IN PUNE</h1>
+
+    <ol>
+        <li>
+            <h2 id="coep">COEP College of Engineering, Pune</h2>
+            <p>College of Engineering, Pune (CoEP), chartered in 1854 is a nationally respected leader in technical education. 
+                The institute is distinguished by its commitment to finding solutions to the great predicaments of the day
+                through advanced technology. The institute has a rich history and dedication to the pursuit of excellence. 
+                CoEP offers a unique learning experience across a spectrum of academic and social experiences. 
+                With a firm footing in truth and humanity, the institute gives you an understanding of both technical 
+                developments and the ethics that go with it.</p>
+            <ul>
+                <li>The curriculum is designed to enhance your academic experience through opportunities like internships, study abroad programmes, and research facilities.</li>
+                <li>The hallmark of CoEP education is its strong and widespread alumni network, support of the industry, and the camaraderie that the institute shares with several foreign universities.</li>
+                <li>The institute is consistently ranked amongst the top 20 technical colleges in India.</li>
+            </ul>
+            <span class="border border-4"><img src="COEP.jpg"></span>
+        </li>
+
+        <li>
+            <h2 id="mit">MIT WPU, Pune</h2>
+            <p>Cultural activities like drama, literary arts, and music, as well as sports and other activities, are very important
+               in student life. MITCOE-ts also have been participating in Firodiya Karandak, an inter-collegiate competition 
+               where students showcase their talents through plays. MITCOE-ts' regularly participate in linguistic and 
+               Marathi play competitions like Purshottam Karandtak.</p>
+            <ul>
+                <li>MITCOE remained in the top three ranks of Purshottam Karandtak.</li>
+                <li>MITCOE was the winner of its 2011 edition.</li>
+            </ul>
+            <span class="border border-4"><img src="MIT.jpg"></span>
+        </li>
+
+        <li>
+            <h2 id="pccoe">PCCOE - Pimpri Chinchwad College Of Engineering, Pune</h2>
+            <p>Pimpri Chinchwad Education Trust (PCET) was established by Late Shri. S. B. Patil in the year 1990 with a vision
+               to provide a value-added educational platform to society in multiple dimensions right from Nursery to Doctoral 
+               programs in all professional streams, enabling all our students to achieve Freedom through Education.</p>
+            <ul>
+                <li>PCET has seven institutes.</li>
+                <li>PCCoE is one of the best engineering colleges in Pune.</li>
+            </ul>
+            <span class="border border-4"><img src="pccoe.jpg"></span>
+        </li>
+
+        <li>
+            <h2 id="symbiosis">Symbiosis University, Lavale, Pune</h2>
+            <p>Located among lush hills, Lavale offers a chance to coexist with nature as it stands over a valley surrounded by 
+               clouds and painted green in its best season. Powered by solar sources, its eco-friendly functioning makes for a 
+               perfect setting for contemplative and incisive study far from the worries and hustle of the city.</p>
+            <ul>
+                <li>Designed to conserve natural resources, the Lavale campus incorporates a rainwater harvesting project to conserve water and re-use it effectively for various purposes.</li>
+                <li>Students are encouraged to walk, and bicycles have been provided for transport.</li>
+                <li>Lavale is approximately 17 km from Pune University and 25 km from Pune train station.</li>
+            </ul>
+            <span class="border border-4"><img src="symbiois.jpg"></span>
+        </li>
+
+        <li>
+            <h2 id="vit">VIT Pune</h2>
+            <p>Vishwakarma Institute of Technology, Pune is a highly reputed engineering college, offering a variety of 
+               undergraduate and postgraduate programs. The campus is equipped with state-of-the-art infrastructure, 
+               modern labs, and various facilities for students.</p>
+            <span class="border border-4"><img src="VIT.jpg"></span>
+        </li>
+
+        <li>
+            <h2 id="bvp">Bharati Vidyapeeth, Pune</h2>
+            <p>Bharati Vidyapeeth is a group of higher educational institutions, established in Pune. It offers various 
+               courses across different fields and has a well-established reputation for quality education.</p>
+            <span class="border border-4"><img src="BVC.jpg"></span>
+        </li>
+
+        <li>
+            <h2 id="dyp">DY Patil College, Pune</h2>
+            <p>DY Patil College is part of the DY Patil Group, known for its contribution to education, health care, and sports. 
+               The college provides state-of-the-art facilities and a great environment for learning and development.</p>
+            <span class="border border-4"><img src="DY.jpg"></span>
+        </li>
+    </ol>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Pune City</title>
+    <style>
+        body {
+            background-image: url('b2.jpg');
+            background-color: aqua;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items at the start of the page */
+            height: 100vh;
+            margin: 2.5px; /* Reset margin to remove default browser margin */
+            padding-top: 30px; /* Add padding at the top to move the yellow box down */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(14, 154, 240, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(2, 79, 109, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin-top: 20px; /* Move the yellow box slightly down from the top */
+        }
+
+        .content-wrapper {
+            padding: 20px; /* Add padding inside the yellow box */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin: 10px 0 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options label {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <h1>Welcome! Explore Pune City</h1>
+            <form id="exploreForm">
+                <p>Name</p>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+                <p>Phone Number</p>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits">
+
+                <p>How many times have you visited Pune City?</p>
+                <input type="number" name="visits" placeholder="Number of visits">
+
+                <p>What are you interested in?</p>
+                <div class="options" id="interest">
+                    <label>
+                        <input type="radio" name="interest" value="college" required> College
+                    </label>
+                    <label>
+                        <input type="radio" name="interest" value="hotels" required> Hotels
+                    </label>
+                    <label>
+                        <input type="radio" name="interest" value="companies" required> Companies
+                    </label>
+                    <label>
+                        <input type="radio" name="interest" value="tourist places" required> Tourist Places
+                    </label>
+                </div>
+
+                <!-- New Dropdown Question -->
+                <p>Where do you want to visit in Pune?</p>
+                <select name="visitPlace" id="visitPlace" required>
+                    <option value="" disabled selected>Select a location</option>
+                    <option value="Hinjewadi IT Park">Hinjewadi IT Park</option>
+                    <option value="Koregaon Park">Koregaon Park</option>
+                    <option value="Warje">Warje</option>
+                    <option value="Kothrud">Kothrud</option>
+                    <option value="Main Pune">Main Pune</option>
+                </select>
+
+                <p>What do you expect from Pune? (Your suggestions)</p>
+                <textarea name="suggestions" id="suggestions" placeholder="Enter your suggestions" required></textarea>
+
+                <input type="submit" value="Submit" id="submitBtn" disabled>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('exploreForm').addEventListener('input', function () {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const interest = document.querySelector('input[name="interest"]:checked');
+            const visitPlace = document.getElementById('visitPlace').value;
+            const suggestions = document.getElementById('suggestions').value.trim();
+
+            const isPhoneValid = /^\d{10}$/.test(phone);
+
+            document.getElementById('submitBtn').disabled = !(name && isPhoneValid && interest && visitPlace && suggestions);
+        });
+    </script>
+</body>
+
+</html>
